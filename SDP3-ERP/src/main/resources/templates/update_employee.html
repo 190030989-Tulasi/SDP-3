@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>ERP</title>
+
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+
+<body>
+		
+    <div class="container">
+    
+        <hr>
+        <h2>Update Employee</h2><br>
+
+        <form action="#" th:action="@{/saveEmployee}" th:object="${employee}" method="POST">
+
+            <!-- Add hidden form field to handle update -->
+            <input type="hidden" th:field="*{id}" />
+            
+            <div class = "form-group">
+						<label for ="empId"> <strong>Employee Id </label> :
+						
+						<input type="text" th:field="*{empId}" id ="empId" name = "empId" placeholder="Enter Id" class="form-control mb-4 col-4">
+					</div>
+					
+					 <div class = "form-group">
+						<label for ="firstName"> <strong>First Name </label> :
+						
+						<input type="text" th:field="*{firstName}" id ="firstName" name = "firstName" placeholder="Enter First Name" class="form-control mb-4 col-4">
+					</div>
+					
+					 <div class = "form-group">
+						<label for ="lastName"> <strong>Last Name </label> :
+						
+						<input type="text" th:field="*{lastName}" id ="empId" name = "lastName" placeholder="Enter Last name" class="form-control mb-4 col-4">
+					</div>
+					
+					 <div class = "form-group">
+						<label for ="email"> <strong>Email </label> :
+						
+						<input type="text" th:field="*{email}" id ="email" name = "email" placeholder="Enter Email" class="form-control mb-4 col-4">
+					</div>
+
+			
+            <button type="submit" class="btn btn-info col-2"> Update Employee</button>
+        </form>
+
+        <hr>
+
+        <a th:href="@{/}"> Back to Employee List</a>
+    </div>
+</body>
+
+</html>

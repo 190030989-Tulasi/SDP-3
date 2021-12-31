@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>ERP</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <h1>ERP</h1>
+        <hr>
+        <h2>Update Student</h2>
+
+        <form action="#" th:action="@{/saveStudent}" th:object="${student}" method="POST">
+
+            <!-- Add hidden form field to handle update -->
+            <input type="hidden" th:field="*{id}" />
+	
+			<input type="number" th:field="*{stud_id}" class="form-control mb-4 col-4">
+			
+            <input type="text" th:field="*{firstName}" class="form-control mb-4 col-4">
+
+            <input type="text" th:field="*{lastName}" class="form-control mb-4 col-4">
+
+            <input type="text" th:field="*{email}" class="form-control mb-4 col-4">
+            
+            <select th:field="*{batch}"class="form-control mb-4 col-4">
+			  	<option value="">Select Batch</option>
+    			<option th:value="'Y18'" th:text="Y18"></option>
+			    <option th:value="'Y19'" th:text="Y19"></option>
+			    <option th:value="'Y20'" th:text="Y20"></option>
+			    <option th:value="'Y21'" th:text="Y21"></option>
+			</select>
+			
+			  <select th:field="*{branch}"class="form-control mb-4 col-4">
+			  	<option value="">Select Branch</option>
+    			<option th:value="'CSE'" th:text="CSE"></option>
+			    <option th:value="'ECE'" th:text="ECE"></option>
+			    <option th:value="'ECM'" th:text="ECM"></option>
+			    <option th:value="'EEE'" th:text="EEE"></option>
+			</select>
+
+            <button type="submit" class="btn btn-info col-2"> Update Student</button>
+        </form>
+
+        <hr>
+
+        <a th:href="@{/addstudent}"> Back to Student List</a>
+    </div>
+</body>
+
+</html>

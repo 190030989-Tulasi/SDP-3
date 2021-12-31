@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>ERP</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <hr>
+        <h2>Save Course</h2>
+
+        <form action="#" th:action="@{/saveCourse}" th:object="${course}" method="POST">
+        	<input type="text" th:field="*{stuId}" placeholder="Student Id" class="form-control mb-4 col-4">
+        	
+        	<select th:field="*{courseCode}"class="form-control mb-4 col-4">
+			  	<option value="">Select Course Code</option>
+			  	
+			  	<option th:value="'21MT1101'" th:text="19MT1101"></option>
+			    <option th:value="'210UC1101'" th:text="190UC1101"></option>
+			    <option th:value="'21SC1101'" th:text="19SC1101"></option>
+			    <option th:value="'21SC1106'" th:text="19SC1106"></option>
+    			<option th:value="'21EC1101'" th:text="19EC1101"></option>
+			    <option th:value="'21CS1203'" th:text="19CS1203"></option>
+			    <option th:value="'21SC1202'" th:text="19CS1202"></option>
+			    <option th:value="'21EC1202'" th:text="19EC1202"></option>
+			    <option th:value="'21SC1106'" th:text="19SC1106"></option>
+    			<option th:value="'21CS311S'" th:text="19CS311S"></option>
+			    <option th:value="'21CS311A'" th:text="19CS311A"></option>
+			    
+			  	
+			  	<option th:value="'20MT1101'" th:text="19MT1101"></option>
+			    <option th:value="'200UC1101'" th:text="190UC1101"></option>
+			    <option th:value="'20SC1101'" th:text="19SC1101"></option>
+			    <option th:value="'20SC1106'" th:text="19SC1106"></option>
+    			<option th:value="'20EC1101'" th:text="19EC1101"></option>
+			    <option th:value="'20CS1203'" th:text="19CS1203"></option>
+			    <option th:value="'20SC1202'" th:text="19CS1202"></option>
+			    <option th:value="'20EC1202'" th:text="19EC1202"></option>
+			    <option th:value="'20SC1106'" th:text="19SC1106"></option>
+    			<option th:value="'20CS311S'" th:text="19CS311S"></option>
+			    <option th:value="'20CS311A'" th:text="19CS311A"></option>
+			    <option th:value="'20CS311P'" th:text="19CS311SP"></option>
+			    <option th:value="'20CS3041S'" th:text="19CS3041S"></option>
+			    <option th:value="'20CS3041A'" th:text="19CS3041A"></option>
+			    <option th:value="'20CS3041P'" th:text="19CS3041SP"></option>
+    			<option th:value="'20CS3060R'" th:text="19CS3060R"></option>
+			    <option th:value="'20CS3060A'" th:text="19CS3060A"></option>
+			    <option th:value="'20CS3060P'" th:text="19CS3060P"></option>
+			  	
+    			<option th:value="'19MT1101'" th:text="19MT1101"></option>
+			    <option th:value="'190UC1101'" th:text="190UC1101"></option>
+			    <option th:value="'19SC1101'" th:text="19SC1101"></option>
+			    <option th:value="'19SC1106'" th:text="19SC1106"></option>
+    			<option th:value="'19EC1101'" th:text="19EC1101"></option>
+			    <option th:value="'19CS1203'" th:text="19CS1203"></option>
+			    <option th:value="'19SC1202'" th:text="19CS1202"></option>
+			    <option th:value="'19EC1202'" th:text="19EC1202"></option>
+			    <option th:value="'19SC1106'" th:text="19SC1106"></option>
+    			<option th:value="'19CS311S'" th:text="19CS311S"></option>
+			    <option th:value="'19CS311A'" th:text="19CS311A"></option>
+			    <option th:value="'19CS311P'" th:text="19CS311SP"></option>
+			    <option th:value="'19CS3041S'" th:text="19CS3041S"></option>
+			    <option th:value="'19CS3041A'" th:text="19CS3041A"></option>
+			    <option th:value="'19CS3041P'" th:text="19CS3041SP"></option>
+    			<option th:value="'19CS3060R'" th:text="19CS3060R"></option>
+			    <option th:value="'19CS3060A'" th:text="19CS3060A"></option>
+			    <option th:value="'19CS3060P'" th:text="19CS3060P"></option>
+			    
+			    <option th:value="'18MT1101'" th:text="19MT1101"></option>
+			    <option th:value="'180UC1101'" th:text="190UC1101"></option>
+			    <option th:value="'18SC1101'" th:text="19SC1101"></option>
+			    <option th:value="'18SC1106'" th:text="19SC1106"></option>
+    			<option th:value="'18EC1101'" th:text="19EC1101"></option>
+			    <option th:value="'18CS1203'" th:text="19CS1203"></option>
+			    <option th:value="'18SC1202'" th:text="19CS1202"></option>
+			    <option th:value="'18EC1202'" th:text="19EC1202"></option>
+			    <option th:value="'18SC1106'" th:text="19SC1106"></option>
+    			<option th:value="'18CS311S'" th:text="19CS311S"></option>
+			    <option th:value="'18CS311A'" th:text="19CS311A"></option>
+			    <option th:value="'18CS311P'" th:text="19CS311SP"></option>
+			    <option th:value="'18CS3041S'" th:text="19CS3041S"></option>
+			    <option th:value="'18CS3041A'" th:text="19CS3041A"></option>
+			    <option th:value="'18CS3041P'" th:text="19CS3041SP"></option>
+    			<option th:value="'18CS3060R'" th:text="19CS3060R"></option>
+			    <option th:value="'18CS3060A'" th:text="19CS3060A"></option>
+			    <option th:value="'18CS3060P'" th:text="19CS3060P"></option>
+			    
+			    <option th:value="'18CY1005'" th:text="18CY1005"></option>
+			</select>
+			
+			<select th:field="*{courseName}"class="form-control mb-4 col-4">
+			  	<option value="">Select Course Name</option>
+    			<option th:value="'MATHEMATICS FOR COMPUTING'" th:text="MathematicsForComputing"></option>
+			    <option th:value="'BASIC ENGLISH'" th:text="BasicEnglish"></option>
+			    <option th:value="'PROBLEM SOLVING AND COMPUTER PROGRAMMING'" th:text="ProblemSolvingAndComputerProgramming"></option>
+			    <option th:value="'TECNICAL SKILLING'" th:text="TecnicalSkilling"></option>
+			    <option th:value="'DIGITAL LOGIC AND PROCESSOR'" th:text="DigitalLogicAndProcessor"></option>
+			    <option th:value="'OBJECT ORIENTED PROGRAMMING LANGUAGE'" th:text="ObjectOrienteddProgrammingLanguage"></option>
+			    <option th:value="'DATA STRUCTURES'" th:text="DataStructures"></option>
+			    <option th:value="'COMPUTER ORGANIZATION AND ARCHITECTIRE'" th:text="ComputerOrganizationAndArchitecture"></option>
+			    <option th:value="'ANALYSIS OF DESIGN AND ALGORITHMS'" th:text="AnalysisOfDesignAndAlgorithms"></option>
+			    <option th:value="'CRYPT ANALYSIS AND CYBER DENFENCE'" th:text="CryptAnalysisAndCyberdefence"></option>
+			    <option th:value="'CHEMISTRY'" th:text="Chemistry"></option>
+			</select>
+			
+            <select th:field="*{section}"class="form-control mb-4 col-4">
+			  	<option value="">Select Section</option>
+    			<option th:value="'S1'" th:text="1"></option>
+    			<option th:value="'S2'" th:text="2"></option>
+    			<option th:value="'S3'" th:text="3"></option>
+    			<option th:value="'S4'" th:text="4"></option>
+    			<option th:value="'S5'" th:text="5"></option>
+    			<option th:value="'S6'" th:text="6"></option>
+    			<option th:value="'S7'" th:text="7"></option>
+    			<option th:value="'S8'" th:text="8"></option>
+    			<option th:value="'S9'" th:text="9"></option>
+    			<option th:value="'S10'" th:text="10"></option>
+    			<option th:value="'S11'" th:text="11"></option>
+    			<option th:value="'S12'" th:text="12"></option>
+    			<option th:value="'S13'" th:text="13"></option>
+    			<option th:value="'S14'" th:text="14"></option>
+    			<option th:value="'S15'" th:text="15"></option>
+    			<option th:value="'S16'" th:text="16"></option>
+    			<option th:value="'S17'" th:text="17"></option>
+    			<option th:value="'S18'" th:text="18"></option>
+    			<option th:value="'S19'" th:text="19"></option>
+    			<option th:value="'S20'" th:text="20"></option>
+    			<option th:value="'S21'" th:text="21"></option>
+    			<option th:value="'S22'" th:text="22"></option>
+    			<option th:value="'S23'" th:text="23"></option>
+    			<option th:value="'S24'" th:text="24"></option>
+    			<option th:value="'S25'" th:text="25"></option>
+    			<option th:value="'S26'" th:text="26"></option>
+    			<option th:value="'S27'" th:text="27"></option>
+    			<option th:value="'S28'" th:text="28"></option>
+    			<option th:value="'S29'" th:text="29"></option>
+    			<option th:value="'S30'" th:text="30"></option>
+			    
+			</select>
+          
+            <select th:field="*{year}"class="form-control mb-4 col-4">
+			  	<option value="">Select Year</option>
+    			<option th:value="'1'" th:text="1"></option>
+			    <option th:value="'2'" th:text="2"></option>
+			    <option th:value="'3'" th:text="3"></option>
+			    <option th:value="'4'" th:text="4"></option>
+			</select>
+		
+            <select th:field="*{semester}"class="form-control mb-4 col-4">
+			  	<option value="">Select Semester</option>
+    			<option th:value="'1'" th:text="1"></option>
+			    <option th:value="'2'" th:text="2"></option>
+			</select>
+			
+			
+            <button type="submit" class="btn btn-info col-2"> Save Course</button>
+        </form>
+
+        <hr>
+
+        <a th:href="@{/addcourse}"> Back to Course List</a>
+    </div>
+</body>
+
+</html>
