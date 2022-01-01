@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <link rel="stylesheet" href="home.css">
+   <link rel="stylesheet" href="../all.css">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+   <title>ERP</title>
+</head>
+<body>
+  <div class="menu-bar">
+   <nav class="navlist">
+      <ul>
+         <li><h4>ERP.</h4></li>
+         <li><div class="dropdown">
+          <a>Employee</a>
+          <div class="dropdown-content">
+          <a th:href="@{/addstudent}">Add Student</a> 
+         <a th:href="@{/addcourse}" >Add Courses</a>
+         <a th:href="@{/addgrade}">Add Grades</a>    
+         <a th:href="@{/ann}">Make Announcement</a>
+
+
+  </div>
+</div>
+
+         </li>
+        <li sec:authorize="isAuthenticated()"><a th:href="@{/logout}">Logout</a></li>
+      </ul>
+   </nav>
+   <div class="main-box">
+    <br><br><br><br><br>
+    <br><br><br><br><br>
+    <br><br><br><br>
+      <h1 align="center">Welcome <span sec:authentication="principal.username"> User</span> </h1><br>
+      
+      <br><br><br>
+      
+   </div>
+
+   <div class="container">
+      <h2>KNOWLEDGE is power.</h2>
+
+      <div class="row">
+      </div>
+
+   </div>
+  
+   </div>
+</body>
+</html>

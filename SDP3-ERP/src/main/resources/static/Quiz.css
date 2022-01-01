@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    height: 100%;
+    width: 100%;
+    background: #eee;
+}
+.head
+{
+    height: 60px;
+    width : 420px;
+    background: #008B8B;
+    border-radius: 25px;
+    text-align: center;
+    color: #fff;
+    font-size: 25pt;
+    padding: 12px 0 0 0;
+    margin: 15px auto;
+}
+.quiz-holder
+{
+    
+}
+.container
+{
+    height: 70%;
+    width : 100%;
+    background: #fff;
+    position: absolute;
+    top : 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius : 10px;
+    box-shadow: 0 0 25px hsla(0, 100%, 90%, 0.3),
+    inset 0 0 0 rgba(0,0,0,0.1);
+}
+.n
+{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    background: #ffffff;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0 0 0;
+    position: absolute;
+    left : 25px;
+    top: 20px;
+}
+.q
+{
+    position: absolute;
+    left : 70px;
+    top : 25px;
+    font-size: 25pt;
+}
+.op
+{
+    display: inline-block;
+    height: 50px;
+    width: 25%;
+    background: #000000;
+    border-radius: 10px;
+    position: absolute;
+    text-align: center;
+    padding: 6px 0 0 0;
+    color: #fff;
+    cursor:pointer;
+}
+.op:hover
+{
+    display: inline-block;
+    height: 50px;
+    width: 25%;
+    background: #E9967A;
+    border-radius: 10px;
+    position: absolute;
+    text-align: center;
+    padding: 6px 0 0 0;
+    color: #000000;
+    cursor:pointer;
+}
+.op:nth-child(1)
+{
+    top: 110px;
+    left : 40px;
+}
+.op:nth-child(2)
+{
+    top: 110px;
+    right : 50px;
+}
+.op:nth-child(3)
+{
+    top: 165px;
+    left : 40px;
+}
+.op:nth-child(4)
+{
+    top: 165px;
+    right : 50px;
+}
+.next
+{
+    position: absolute;
+    height: 30px;
+    width: 85px;
+    background: #008B8B ;
+    top : 230px;
+    right: 20px;
+    border-radius: 8px;
+    color : #fff;
+    text-align: center;
+    padding: 5px 0 0 0;
+    cursor: pointer;
+}
+.meta
+{
+    position: absolute;
+    bottom: 150px;
+    left : 50%;
+    transform: translateX(-50%);
+    height: 10px;
+    width: 20%;
+    border-top : 1px solid hsla(0, 100%, 90%, 0.3);
+    padding: 25px 0 0 0;
+    text-transform: uppercase;
+    
+}
+.a-t
+{
+    float: right;
+}
+.after-quiz
+{
+    height: 800px;
+    width : 100%;
+    background: #fff;
+    position: absolute;
+    top : 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius : 10px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.1),
+    inset 0 0 0 rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 150px 0 0 0;
+    font-size: 22pt;
+    text-transform: uppercase;
+    display: none;
+    
+}
